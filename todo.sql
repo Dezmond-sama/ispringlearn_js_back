@@ -2,7 +2,7 @@ CREATE TABLE users (
   user_id serial PRIMARY KEY,
   firstname varchar(24) NOT NULL,
   lastname varchar(64) NOT NULL,
-  login varchar(64) NOT NULL
+  username varchar(64) NOT NULL
 );
 
 CREATE TABLE tasks (
