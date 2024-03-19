@@ -26,7 +26,6 @@ const testWeightedGraph = () => {
     check(graph.shortestDistance(2, 5), 9);
 
     graph.removeEdge(3, 5);
-    console.log(graph.shortestDistance(3, 5));
     check(graph.shortestDistance(3, 5), 9);
 
     check(graph.shortestDistance(1, 7), undefined);
