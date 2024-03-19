@@ -1,7 +1,5 @@
-//Написать класс, реализующий двусвязный список. Предусмотреть методы поиска, вставки, удаления, изменения элемента и определения длины списка.
-
-// Single element of the list
-class ListNode {
+export class ListNode {
+    // Single element of the list
     constructor(value) {
         this.next = null;
         this.prev = null;
@@ -9,8 +7,8 @@ class ListNode {
     }
 }
 
-// List of nodes
-class DoublyLinkedList {
+export class DoublyLinkedList {
+    // List of nodes
     #length = 0;
     constructor() {
         this.head = null;
@@ -134,50 +132,14 @@ class DoublyLinkedList {
         return this;
     }
 
-    // print to the console
-    print() {
+    // Convert to string
+    ToString() {
         let curr = this.head;
         let str = [];
         while (curr) {
             str.push(curr.value);
             curr = curr.next;
         }
-        console.log(str.join(" ") + " | " + this.#length);
+        return str.join(" ");
     }
 }
-
-// tests
-
-let lst = new DoublyLinkedList();
-lst.push(1).push(2).push(3).push(4).unshift(5).push(6);
-lst.print();
-lst.remove(lst.search(2));
-lst.print();
-lst.remove(lst.search(3));
-lst.print();
-lst.remove(lst.search(6));
-lst.print();
-lst.remove(lst.search(5));
-lst.print();
-lst.remove(lst.search(5));
-lst.print();
-
-lst.push(1).push(2).push(3).unshift(4);
-lst.print();
-
-//---
-lst.insertAfterObject(lst.search(3), 42);
-lst.print();
-//---
-lst.insertAfterValue(3, "test");
-lst.print();
-//---
-lst.insertAfterValue(10, 190);
-lst.print();
-
-//---
-lst.updateByValue(1, 1111);
-lst.print();
-
-lst.updateByValue(4, 4444, true);
-lst.print();

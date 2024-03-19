@@ -1,0 +1,15 @@
+{
+  "name": "js_1",
+  "version": "1.0.0",
+  "description": "## Complete at least 2 tasks:",
+  "main": "DoublyLinkedList.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
